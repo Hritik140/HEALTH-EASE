@@ -58,6 +58,10 @@ const userSchema = new Mongoose.Schema({
     public_id: String,
     url: String,
   },
+
+  resetPasswordToken: String,
+  resetPasswordExpires: Date,
+
 });
 
 userSchema.pre("save", async function (next) {
