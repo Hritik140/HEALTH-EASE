@@ -64,12 +64,14 @@ const Login = () => {
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
+          
           <input
             type="password"
             placeholder="Confirm Password"
             value={confirmPassword}
             onChange={(e) => setConfirmPassword(e.target.value)}
           />
+          
           <div
             style={{
               gap: "10px",
@@ -84,6 +86,14 @@ const Login = () => {
             >
               Register Now
             </Link>
+            <p style={{ textAlign: "right", marginTop: "5px", marginBottom: "15px" }}>
+            <Link 
+              to="/forgot-password" 
+              style={{ color: "#271776ca", textDecoration: "underline", fontSize: "0.9rem" }}
+            >
+              Forgot Password?
+            </Link>
+            </p>
           </div>
           <div style={{ justifyContent: "center", alignItems: "center" }}>
             <button type="submit">Login</button>
