@@ -8,6 +8,8 @@ import {
   logoutAdmin,
   logoutPatient,
   patientRegister,
+  forgotPassword,
+  resetPassword
 } from "../controller/userController.js";
 import {
   isAdminAuthenticated,
@@ -18,6 +20,8 @@ const router = express.Router();
 
 router.post("/patient/register", patientRegister);
 router.post("/login", login);
+router.post("/forgot-password", forgotPassword);
+router.post("/reset-password/:token", resetPassword);
 router.post("/admin/addnew", isAdminAuthenticated, addNewAdmin);
 router.post("/doctor/addnew", isAdminAuthenticated, addNewDoctor);
 router.get("/doctors", getAllDoctors);
